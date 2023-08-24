@@ -10,6 +10,12 @@
     <main>
         <h1>Welcome to My Website</h1>  
         <p>This is my new website which is hosted on GitHub Pages!</p>
+        <button type="button" onclick="myFunction()">Click Me!</button>
     </main>
+    <script>
+    function myFunction() { 
+      window.parent.postMessage('Hello', '*');
+    }
+    </script>
   </body>
 </html>

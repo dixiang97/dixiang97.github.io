@@ -13,8 +13,12 @@
         <button type="button" onclick="myFunction()">Click Me!</button>
     </main>
     <script>
-    function myFunction() { 
-      window.parent.postMessage('Hello', '*');
+    function myFunction() {
+      let msg = {
+        oppId: '0067a00000RpUe2AAF',
+        msg: 'Hello there'
+      };
+      window.parent.postMessage(msg, '*');
     }
     </script>
   </body>

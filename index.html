@@ -14,19 +14,22 @@
         <button type="button" onclick="handleClose()">Close</button>
     </main>
     <script>
-    function handleSubmit() {
-        let msg = {
-            action: 'Submit',
-            oppId: '0067a00000RpUe2AAF'
-        };
-        window.parent.postMessage(msg, '*');
-    }
-    function handleClose() {
-        let msg = {
-            action: 'Close'
-        };
-        window.parent.postMessage(msg, '*');
-    }
+      function handleSubmit() {
+          let msg = {
+              action: 'Submit',
+              oppId: '0067a00000RpUe2AAF'
+          };
+          window.parent.postMessage(msg, '*');
+      }
+      function handleClose() {
+          let msg = {
+              action: 'Close'
+          };
+          window.parent.postMessage(msg, '*');
+      }
+      window.addEventListener('message', function(e) {
+          console.log("Message received from the parent: " + e.data); // Message received from parent
+      });
     </script>
   </body>
 </html>

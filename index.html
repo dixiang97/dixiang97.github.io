@@ -10,15 +10,22 @@
     <main>
         <h1>Welcome to My Website</h1>  
         <p>This is my new website which is hosted on GitHub Pages!</p>
-        <button type="button" onclick="myFunction()">Click Me!</button>
+        <button type="button" onclick="handleSubmit()">Submit</button>
+        <button type="button" onclick="handleClose()">Close</button>
     </main>
     <script>
-    function myFunction() {
-      let msg = {
-        oppId: '0067a00000RpUe2AAF',
-        msg: 'Hello there'
-      };
-      window.parent.postMessage(msg, '*');
+    function handleSubmit() {
+        let msg = {
+            action: 'Submit',
+            oppId: '0067a00000RpUe2AAF'
+        };
+        window.parent.postMessage(msg, '*');
+    }
+    function handleClose() {
+        let msg = {
+            action: 'Close'
+        };
+        window.parent.postMessage('msg', '*');
     }
     </script>
   </body>

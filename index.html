@@ -28,7 +28,7 @@
           window.parent.postMessage(msg, '*');
       }
       window.addEventListener('message', function(e) {
-          console.log("Message received from the parent: " + e.data); // Message received from parent
+          console.log("Message received from the parent: " + e.origin + e.data); // Message received from parent
       });
     </script>
   </body>

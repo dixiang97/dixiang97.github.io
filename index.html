@@ -16,8 +16,10 @@
     <script>
       function handleSubmit() {
           let msg = {
-              action: 'Submit',
-              oppId: '0067a00000RpUe2AAF'
+            pegOpportunityId: '1234',
+            action: 'create',
+            transactionId: 'PEG999',
+            status: 200
           };
           window.parent.postMessage(msg, 'https://bain4--appint.sandbox.lightning.force.com');
       }
